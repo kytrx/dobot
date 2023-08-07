@@ -36,7 +36,7 @@ def droplet_detail(call: CallbackQuery, data: dict):
     markup.row(
 
         InlineKeyboardButton(
-            text='menghapus',
+            text='Menghapus',
             callback_data=f'droplet_actions?doc_id={doc_id}&droplet_id={droplet_id}&a=delete'
         ),
     )
