@@ -8,9 +8,9 @@ git clone https://github.com/kytrx/dobot.git
 pip3 install -r /etc/dobot/requirements.txt
 
 clear
-read -e -p "[*] Input Nama Store : " nama
-read -e -p "[*] Input Bot Token : " bottoken
-read -e -p "[*] Input Id Telegram :" admin
+read -e -p "[*] Input Nama Luuu   : " nama
+read -e -p "[*] Input Bot Token   : " bottoken
+read -e -p "[*] Input Id Telegram : " admin
 
 sed -i "s/NAMA STORE/$nama/g" /etc/dobot/config.json &> /dev/null
 sed -i "s/BOT TOKEN/$bottoken/g" /etc/dobot/config.json &> /dev/null
