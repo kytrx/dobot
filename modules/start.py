@@ -15,31 +15,31 @@ def start(d: Message):
     markup = InlineKeyboardMarkup(row_width=2)
     markup.add(
         InlineKeyboardButton(
-            text='Add account',
+            text='Tambah account',
             callback_data='add_account'
         ),
         InlineKeyboardButton(
-            text='Manage accounts',
+            text='List accounts',
             callback_data='manage_accounts'
         ),
         InlineKeyboardButton(
-            text='Create droplets',
+            text='Membuat droplets',
             callback_data='create_droplet'
         ),
         InlineKeyboardButton(
-            text='Manage droplets',
+            text='Cek droplets',
             callback_data='manage_droplets'
         ),
     )
     t = f'Selamat Datang <b>{bot_name}</b>\n\n' \
-        'Anda dapat mengelola akun DigitalOcean, membuat instance, dll.\n\n' \
+        'Anda Dapat Mengelola Akun DigitalOcean, membuat VPS, Dll.\n\n' \
         'Perintah cepat:\n' \
-        '/start - start bot\n' \
-        '/add_do - add account\n' \
-        '/sett_do - manage accounts\n' \
+        '/start - mulai bot\n' \
+        '/add_do - tambah account\n' \
+        '/sett_do - list accounts\n' \
         '/bath_do - batch test accounts\n' \
-        '/add_vps - create droplets\n' \
-        '/sett_vps - manage droplets\n' \
+        '/add_vps - membuat droplets\n' \
+        '/sett_vps - list droplets\n' \
         ' \n'
     bot.send_message(
         text=t,
