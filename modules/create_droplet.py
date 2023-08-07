@@ -18,7 +18,7 @@ from utils.password_generator import password_generator
 
 user_dict = {}
 
-t = '<b>Buat instance</b>\n\n'
+t = '<b>Buat VPS</b>\n\n'
 
 
 def create_droplet(d: Union[Message, CallbackQuery], data: dict = None):
@@ -65,7 +65,7 @@ def select_region(call: CallbackQuery, data: dict):
 
     bot.edit_message_text(
         text=f'{_t}'
-             f'Dapatkan di Negara tersebut...',
+             f'Dapatkan Di Negara Tersebut...',
         chat_id=call.from_user.id,
         message_id=call.message.message_id,
         parse_mode='HTML'
@@ -259,7 +259,7 @@ def ask_create(m: Message):
     )
     markup.row(
         InlineKeyboardButton(
-            text='membuat',
+            text='Membuat',
             callback_data=f'create_droplet?nf=confirm_create&name={m.text}'
         )
     )
@@ -288,7 +288,7 @@ def confirm_create(call: CallbackQuery, data: dict):
 
     bot.edit_message_text(
         text=f'{call.message.html_text}\n\n'
-             '<b>Buat instance...</b>',
+             '<b>Buat VPS...</b>',
         chat_id=call.from_user.id,
         message_id=call.message.message_id,
         parse_mode='HTML'
@@ -314,7 +314,7 @@ def confirm_create(call: CallbackQuery, data: dict):
     markup = InlineKeyboardMarkup()
     markup.row(
         InlineKeyboardButton(
-            text='Periksa detailnya',
+            text='Periksa Detailnya',
             callback_data=f'droplet_detail?'
                           f'doc_id={user_dict[call.from_user.id]["account"].doc_id}&'
                           f'droplet_id={droplet.id}'
@@ -323,10 +323,10 @@ def confirm_create(call: CallbackQuery, data: dict):
 
     bot.edit_message_text(
         text=f'{call.message.html_text}\n'
-             f'UserName: <code>root</code>\n'   
-             f'kata sandi: <code>{password}</code>\n'
-             f'IP： <code>{droplet.ip_address}</code>\n\n'
-             '<b>Buat server Selesai</b>',
+             f'Username  : <code>root</code>\n'   
+             f'Kata Sandi: <code>{password}</code>\n'
+             f'IP VPS    ：<code>{droplet.ip_address}</code>\n\n'
+             '<b>Buat Server Telah Selesai</b>',
         chat_id=call.from_user.id,
         message_id=call.message.message_id,
         parse_mode='HTML'
