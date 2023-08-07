@@ -24,7 +24,7 @@ def droplet_actions(call: CallbackQuery, data: dict):
 def delete(call: CallbackQuery, droplet: digitalocean.Droplet):
     bot.edit_message_text(
         text=f'{call.message.html_text}\n\n'
-             '<b>Contoh Penghapusan...</b>',
+             '<b>Proses Penghapusan...</b>',
         chat_id=call.from_user.id,
         message_id=call.message.message_id,
         parse_mode='HTML'
@@ -35,7 +35,7 @@ def delete(call: CallbackQuery, droplet: digitalocean.Droplet):
 
     bot.edit_message_text(
         text=f'{call.message.html_text}\n\n'
-             f'<b>Contoh telah dihapus</b>',
+             f'<b>Berhasil Di Hapus</b>',
         chat_id=call.from_user.id,
         message_id=call.message.message_id,
         parse_mode='HTML'
