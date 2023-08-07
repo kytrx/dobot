@@ -11,7 +11,7 @@ def delete_account(call: CallbackQuery, data: dict):
 
     bot.edit_message_text(
         text=f'{call.message.html_text}\n\n'
-             f'<b>Akun telah dihapus</b>',
+             f'<b>Akun Berhasil Di Hapus</b>',
         chat_id=call.from_user.id,
         message_id=call.message.message_id,
         parse_mode='HTML'
